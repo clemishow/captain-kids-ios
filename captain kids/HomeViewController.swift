@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class HomeViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class HomeViewController: UIViewController {
             print("user sign in")
             print(user)
             print(user?.email)
+            print(user?.displayName)
         } else {
             print("no user sign in")
         }

@@ -8,5 +8,6 @@ target 'captain kids' do
   # Pods for captain kids
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
 end

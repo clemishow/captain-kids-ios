@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var displayNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -26,19 +27,29 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerButtonTapped(_ sender: UIButton) {
+        // Create alert
+        let alertController = UIAlertController(title: "Erreur", message:
+            "", preferredStyle: UIAlertControllerStyle.alert)
+        
         // Register with Firebase
-        if let email = emailTextField.text, let password = passwordTextField.text {
+        if let email = emailTextField.text, !email.isEmpty,
+           let password = passwordTextField.text, !password.isEmpty,
+           let name = displayNameTextField.text, !name.isEmpty {
             Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-                
-                // Create alert
-                let alertController = UIAlertController(title: "Erreur", message:
-                    "", preferredStyle: UIAlertControllerStyle.alert)
-                
                 
                 if let u = user {
                     // Work
                     alertController.title = "Compte crée"
                     alertController.message = "Votre compte a bien été crée. Vous pouvez désormais vous connecter"
+                    
+                    // Add a display name
+                    let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                    changeRequest?.displayName = name
+                    changeRequest?.commitChanges { (error) in
+                        print(error)
+                    }
+                    
+                    // Alert to handle redirection after register
                     alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
                         (alert: UIAlertAction!) in self.performSegue(withIdentifier: "goToLoginPage", sender: self)
                     }))
@@ -66,6 +77,11 @@ class RegisterViewController: UIViewController {
                     
                 }
             })
+        } else {
+            alertController.title = "Erreur"
+            alertController.message = "Veuillez remplir tous les champs"
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
