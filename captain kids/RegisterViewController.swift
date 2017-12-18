@@ -33,16 +33,20 @@ class RegisterViewController: UIViewController {
                 // Create alert
                 let alertController = UIAlertController(title: "Erreur", message:
                     "", preferredStyle: UIAlertControllerStyle.alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
+                
                 
                 if let u = user {
                     // Work
                     alertController.title = "Compte crée"
                     alertController.message = "Votre compte a bien été crée. Vous pouvez désormais vous connecter"
+                    alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
+                        (alert: UIAlertAction!) in self.performSegue(withIdentifier: "goToLoginPage", sender: self)
+                    }))
                     self.present(alertController, animated: true, completion: nil)
                 } else {
                     // Error
                     // Get code error from Firebase Auth
+                    alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                     if let errCode = AuthErrorCode(rawValue: error!._code) {
                         switch errCode {
                             case .invalidEmail:

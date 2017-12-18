@@ -38,7 +38,7 @@ class ViewController: UIViewController {
                 
                 if let u = user {
                     // Work
-                    self.performSegue(withIdentifier: "goToHome", sender: self)
+                    self.performSegue(withIdentifier: "goToHomePage", sender: self)
                 } else {
                     // Error
                     // Get code error from Firebase Auth

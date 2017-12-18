@@ -14,6 +14,7 @@
 		D70D99A71FE8086700A8106C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70D99A51FE8086700A8106C /* LaunchScreen.storyboard */; };
 		D7672ADE1FE8368D003B6FD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7672ADD1FE8368C003B6FD8 /* GoogleService-Info.plist */; };
 		D7672AE01FE85712003B6FD8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */; };
+		D7672AE21FE85C0C003B6FD8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7672AE11FE85C0C003B6FD8 /* HomeViewController.swift */; };
 		FAFE092CF9118CADE57EA7C4 /* Pods_captain_kids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E56AA2FA94EDFD3BB250546 /* Pods_captain_kids.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		D70D99A81FE8086700A8106C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7672ADD1FE8368C003B6FD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D7672AE11FE85C0C003B6FD8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				D70D99A51FE8086700A8106C /* LaunchScreen.storyboard */,
 				D70D99A81FE8086700A8106C /* Info.plist */,
 				D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */,
+				D7672AE11FE85C0C003B6FD8 /* HomeViewController.swift */,
 			);
 			path = "captain kids";
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				D7672AE01FE85712003B6FD8 /* RegisterViewController.swift in Sources */,
 				D70D999F1FE8086700A8106C /* ViewController.swift in Sources */,
 				D70D999D1FE8086700A8106C /* AppDelegate.swift in Sources */,
+				D7672AE21FE85C0C003B6FD8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

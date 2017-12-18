@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="captain_kids" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginPage" id="BYZ-38-t0r" customClass="ViewController" customModule="captain_kids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2H-YV-BwG">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="clement.saulnier@hetic.net" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2H-YV-BwG">
                                                 <rect key="frame" x="0.0" y="35.5" width="351" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -56,7 +56,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spQ-H1-BU1">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hello78" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="spQ-H1-BU1">
                                                 <rect key="frame" x="0.0" y="35.5" width="351" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -113,7 +113,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="Z2H-YV-BwG" id="3oI-4M-m5f"/>
                         <outlet property="passwordTextField" destination="spQ-H1-BU1" id="2Jt-ih-bzs"/>
-                        <segue destination="yJC-s5-eiY" kind="show" identifier="goToHome" id="Yff-YD-U88"/>
+                        <segue destination="yJC-s5-eiY" kind="show" identifier="goToHomePage" id="Yff-YD-U88"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -204,7 +204,7 @@
                                         <rect key="frame" x="41" y="20.5" width="95" height="30"/>
                                         <state key="normal" title="Me connecter"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="eJw-bW-hnx"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goToLoginPage" animates="NO" id="eJw-bW-hnx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -229,12 +229,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDc-7L-7my" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-290" y="865"/>
+            <point key="canvasLocation" x="-290" y="1119"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="Iv8-Lp-n1q">
             <objects>
-                <viewController id="yJC-s5-eiY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePage" id="yJC-s5-eiY" customClass="HomeViewController" customModule="captain_kids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DgP-tt-Zk8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJx-jd-qyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="471" y="132"/>
+            <point key="canvasLocation" x="966" y="134"/>
         </scene>
     </scenes>
 </document>
