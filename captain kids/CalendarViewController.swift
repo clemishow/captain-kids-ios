@@ -1,31 +1,18 @@
 //
-//  HomeViewController.swift
+//  CalendarViewController.swift
 //  captain kids
 //
-//  Created by Dev on 18/12/2017.
+//  Created by Dev on 19/12/2017.
 //  Copyright © 2017 Hetic. All rights reserved.
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseDatabase
 
-class HomeViewController: UIViewController {
+class CalendarViewController: UIViewController {
 
-    @IBOutlet weak var displayNameLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let user = Auth.auth().currentUser
-        if user != nil {
-            print("user sign in")
-            print(user!)
-            print(user!.email!)
-            displayNameLabel.text = "Bonjour " + user!.displayName!
-        } else {
-            print("no user sign in")
-        }
+
         // Do any additional setup after loading the view.
     }
 

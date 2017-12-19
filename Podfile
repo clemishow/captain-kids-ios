@@ -6,8 +6,12 @@ target 'captain kids' do
   use_frameworks!
 
   # Pods for captain kids
+  # Firebasehttps://firebase.google.com/
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+
+  # FSCalendar https://github.com/WenchaoD/FSCalendar
+  pod 'FSCalendar'
 
 end

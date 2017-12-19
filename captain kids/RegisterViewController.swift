@@ -46,7 +46,7 @@ class RegisterViewController: UIViewController {
                     let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                     changeRequest?.displayName = name
                     changeRequest?.commitChanges { (error) in
-                        print(error)
+                        print(error!)
                     }
                     
                     // Alert to handle redirection after register

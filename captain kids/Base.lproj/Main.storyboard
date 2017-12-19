@@ -35,7 +35,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="clement.saulnier@hetic.net" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2H-YV-BwG">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="clement@saulnier.fr" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2H-YV-BwG">
                                                 <rect key="frame" x="0.0" y="35.5" width="351" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -113,7 +113,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="Z2H-YV-BwG" id="3oI-4M-m5f"/>
                         <outlet property="passwordTextField" destination="spQ-H1-BU1" id="2Jt-ih-bzs"/>
-                        <segue destination="yJC-s5-eiY" kind="show" identifier="goToHomePage" id="Yff-YD-U88"/>
+                        <segue destination="a9v-m3-rIT" kind="show" identifier="goToHomePage" id="Yff-YD-U88"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -259,7 +259,7 @@
             </objects>
             <point key="canvasLocation" x="-290" y="1119"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Faire un choix-->
         <scene sceneID="Iv8-Lp-n1q">
             <objects>
                 <viewController storyboardIdentifier="homePage" id="yJC-s5-eiY" customClass="HomeViewController" customModule="captain_kids" customModuleProvider="target" sceneMemberID="viewController">
@@ -267,21 +267,108 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WELCOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpD-5h-U75">
-                                <rect key="frame" x="145" y="323" width="84" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpD-5h-U75">
+                                <rect key="frame" x="164" y="323.5" width="47.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hF0-RL-o2C">
+                                <rect key="frame" x="0.0" y="434" width="375" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Z-B7-1JW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <state key="normal" title="Être accompagnateur"/>
+                                        <connections>
+                                            <segue destination="Z8o-04-cVC" kind="show" id="LyZ-0A-fvW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-3D-X52">
+                                <rect key="frame" x="0.0" y="494" width="375" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dd-AJ-ysn">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <state key="normal" title="Faire raccompagner mes enfants"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JyD-bG-FJ0" firstAttribute="trailing" secondItem="hF0-RL-o2C" secondAttribute="trailing" id="0j9-Ww-X7o"/>
+                            <constraint firstItem="DdT-3D-X52" firstAttribute="top" secondItem="hF0-RL-o2C" secondAttribute="bottom" constant="30" id="9zA-fv-Ue6"/>
+                            <constraint firstItem="hF0-RL-o2C" firstAttribute="centerX" secondItem="DgP-tt-Zk8" secondAttribute="centerX" id="KBQ-Un-brm"/>
+                            <constraint firstItem="DdT-3D-X52" firstAttribute="leading" secondItem="JyD-bG-FJ0" secondAttribute="leading" id="Rca-4B-dyk"/>
+                            <constraint firstItem="hF0-RL-o2C" firstAttribute="top" secondItem="PpD-5h-U75" secondAttribute="bottom" constant="90" id="T2w-hb-dMA"/>
+                            <constraint firstItem="PpD-5h-U75" firstAttribute="centerY" secondItem="DgP-tt-Zk8" secondAttribute="centerY" id="bif-C7-1GL"/>
+                            <constraint firstItem="JyD-bG-FJ0" firstAttribute="trailing" secondItem="DdT-3D-X52" secondAttribute="trailing" id="iHh-DU-CeN"/>
+                            <constraint firstItem="hF0-RL-o2C" firstAttribute="leading" secondItem="JyD-bG-FJ0" secondAttribute="leading" id="igH-fi-TyR"/>
+                            <constraint firstItem="DdT-3D-X52" firstAttribute="centerX" secondItem="DgP-tt-Zk8" secondAttribute="centerX" id="jTF-z2-a1G"/>
+                            <constraint firstItem="PpD-5h-U75" firstAttribute="centerX" secondItem="DgP-tt-Zk8" secondAttribute="centerX" id="yaF-bl-AM2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JyD-bG-FJ0"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Faire un choix" id="9wh-TZ-4Gs"/>
+                    <connections>
+                        <outlet property="displayNameLabel" destination="PpD-5h-U75" id="byB-Ll-3sK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJx-jd-qyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="134"/>
+            <point key="canvasLocation" x="1831" y="133"/>
+        </scene>
+        <!--Data Source-->
+        <scene sceneID="pxf-Vp-u65">
+            <objects>
+                <viewController id="Z8o-04-cVC" customClass="CalendarViewController" customModule="captain_kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GvU-Pk-T1g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nP-Gg-tQ8" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Z8o-04-cVC" id="JbY-d3-Jhh"/>
+                                    <outlet property="delegate" destination="Z8o-04-cVC" id="yWc-F8-MO5"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2nP-Gg-tQ8" firstAttribute="top" secondItem="y5C-F3-tiK" secondAttribute="top" id="WXx-nv-2VX"/>
+                            <constraint firstItem="y5C-F3-tiK" firstAttribute="bottom" secondItem="2nP-Gg-tQ8" secondAttribute="bottom" id="Zg8-pd-qKE"/>
+                            <constraint firstItem="2nP-Gg-tQ8" firstAttribute="centerX" secondItem="GvU-Pk-T1g" secondAttribute="centerX" id="gnX-vm-K91"/>
+                            <constraint firstItem="2nP-Gg-tQ8" firstAttribute="centerY" secondItem="GvU-Pk-T1g" secondAttribute="centerY" id="jgH-0F-4yr"/>
+                            <constraint firstItem="2nP-Gg-tQ8" firstAttribute="leading" secondItem="y5C-F3-tiK" secondAttribute="leading" id="rjf-D9-Xg2"/>
+                            <constraint firstItem="y5C-F3-tiK" firstAttribute="trailing" secondItem="2nP-Gg-tQ8" secondAttribute="trailing" id="waT-Pw-erh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="y5C-F3-tiK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXU-KS-6GF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2690" y="156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TTE-zG-GjK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a9v-m3-rIT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bas-iz-VhV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yJC-s5-eiY" kind="relationship" relationship="rootViewController" id="FNS-iG-QLX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inU-eZ-4bZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964.79999999999995" y="133.13343328335833"/>
         </scene>
     </scenes>
 </document>
