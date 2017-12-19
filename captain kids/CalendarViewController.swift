@@ -36,7 +36,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     @IBAction func handleValidate(_ sender: UIButton) {
         if (selectDate != nil) {
             print("there is a selected date")
-            let controller = storyboard?.instantiateViewController(withIdentifier: "ChildrensTableViewController") as! ChildrensTableViewController
+            let controller = storyboard?.instantiateViewController(withIdentifier: "ChildrensViewController") as! ChildrensViewController
             controller.selectDate = self.selectDate
             navigationController?.pushViewController(controller, animated: true)
         } else {
@@ -46,9 +46,9 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         }
     }
     
-//    func minimumDate(for calendar: FSCalendar) -> Date {
-//        return Date()
-//    }
+    func minimumDate(for calendar: FSCalendar) -> Date {
+        return Date()
+    }
     
     
     /*
