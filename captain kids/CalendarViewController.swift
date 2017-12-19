@@ -7,21 +7,45 @@
 //
 
 import UIKit
+import FSCalendar
 
-class CalendarViewController: UIViewController {
 
+class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
+    
+    
+    @IBOutlet weak var calendar: FSCalendar!
+    var selectDate: Date? = nil
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
+    
+    func calendar(_ calendar: FSCalendar, didSelect date: Date) {
+        self.selectDate = date
+    }
+    
+    @IBAction func handleValidate(_ sender: UIButton) {
+        print("tapped")
+        
+        print(selectDate)
+        if (selectDate != nil) {
+            print("there is a selected date")
+        } else {
+            print("no select date")
+            let alert = UIAlertController(title: "Erreur", message: "Veuillez sélectionner une date", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -328,18 +328,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nP-Gg-tQ8" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="539"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Z8o-04-cVC" id="JbY-d3-Jhh"/>
                                     <outlet property="delegate" destination="Z8o-04-cVC" id="yWc-F8-MO5"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCI-Qc-EXP">
+                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="handleValidate:" destination="Z8o-04-cVC" eventType="touchUpInside" id="Hyi-e0-asn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eCI-Qc-EXP" firstAttribute="top" secondItem="2nP-Gg-tQ8" secondAttribute="bottom" id="1DO-FS-ZfQ"/>
+                            <constraint firstItem="eCI-Qc-EXP" firstAttribute="leading" secondItem="y5C-F3-tiK" secondAttribute="leading" id="3jp-ua-aYQ"/>
+                            <constraint firstItem="eCI-Qc-EXP" firstAttribute="bottom" secondItem="y5C-F3-tiK" secondAttribute="bottom" id="ADk-xT-GQu"/>
                             <constraint firstItem="2nP-Gg-tQ8" firstAttribute="top" secondItem="y5C-F3-tiK" secondAttribute="top" id="WXx-nv-2VX"/>
-                            <constraint firstItem="y5C-F3-tiK" firstAttribute="bottom" secondItem="2nP-Gg-tQ8" secondAttribute="bottom" id="Zg8-pd-qKE"/>
+                            <constraint firstItem="eCI-Qc-EXP" firstAttribute="trailing" secondItem="y5C-F3-tiK" secondAttribute="trailing" id="fiw-qv-VoO"/>
                             <constraint firstItem="2nP-Gg-tQ8" firstAttribute="centerX" secondItem="GvU-Pk-T1g" secondAttribute="centerX" id="gnX-vm-K91"/>
                             <constraint firstItem="2nP-Gg-tQ8" firstAttribute="centerY" secondItem="GvU-Pk-T1g" secondAttribute="centerY" id="jgH-0F-4yr"/>
                             <constraint firstItem="2nP-Gg-tQ8" firstAttribute="leading" secondItem="y5C-F3-tiK" secondAttribute="leading" id="rjf-D9-Xg2"/>
@@ -347,10 +357,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y5C-F3-tiK"/>
                     </view>
+                    <connections>
+                        <outlet property="calendar" destination="2nP-Gg-tQ8" id="Xn2-ki-lGI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXU-KS-6GF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2690" y="156"/>
+            <point key="canvasLocation" x="2689" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TTE-zG-GjK">
