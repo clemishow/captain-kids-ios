@@ -12,6 +12,7 @@
 		D70D99A21FE8086700A8106C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70D99A01FE8086700A8106C /* Main.storyboard */; };
 		D70D99A41FE8086700A8106C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70D99A31FE8086700A8106C /* Assets.xcassets */; };
 		D70D99A71FE8086700A8106C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70D99A51FE8086700A8106C /* LaunchScreen.storyboard */; };
+		D72DCC531FE96CC2001C6AD3 /* ChildrensTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DCC521FE96CC2001C6AD3 /* ChildrensTableViewController.swift */; };
 		D737ACAD1FE9123C00722E6E /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737ACAC1FE9123C00722E6E /* CalendarViewController.swift */; };
 		D7672ADE1FE8368D003B6FD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7672ADD1FE8368C003B6FD8 /* GoogleService-Info.plist */; };
 		D7672AE01FE85712003B6FD8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */; };
@@ -30,6 +31,7 @@
 		D70D99A31FE8086700A8106C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D70D99A61FE8086700A8106C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D70D99A81FE8086700A8106C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D72DCC521FE96CC2001C6AD3 /* ChildrensTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChildrensTableViewController.swift; path = ChildrensList/ChildrensTableViewController.swift; sourceTree = "<group>"; };
 		D737ACAC1FE9123C00722E6E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		D7672ADD1FE8368C003B6FD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */,
 				D7672AE11FE85C0C003B6FD8 /* HomeViewController.swift */,
 				D737ACAC1FE9123C00722E6E /* CalendarViewController.swift */,
+				D72DCC521FE96CC2001C6AD3 /* ChildrensTableViewController.swift */,
 			);
 			path = "captain kids";
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				D737ACAD1FE9123C00722E6E /* CalendarViewController.swift in Sources */,
 				D7672AE01FE85712003B6FD8 /* RegisterViewController.swift in Sources */,
+				D72DCC531FE96CC2001C6AD3 /* ChildrensTableViewController.swift in Sources */,
 				D70D999F1FE8086700A8106C /* ViewController.swift in Sources */,
 				D70D999D1FE8086700A8106C /* AppDelegate.swift in Sources */,
 				D7672AE21FE85C0C003B6FD8 /* HomeViewController.swift in Sources */,

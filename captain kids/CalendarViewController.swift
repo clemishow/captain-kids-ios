@@ -20,36 +20,35 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         super.viewDidLoad()
         
         calendar.today = nil
-        
-        // Do any additional setup after loading the view.
+        print(Date())
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
+    // When user select a date
     func calendar(_ calendar: FSCalendar, didSelect date: Date) {
-        self.selectDate = date
+        self.selectDate = Calendar.current.date(byAdding: .day, value: 1, to: date)
     }
     
+    // When user tap validate button
     @IBAction func handleValidate(_ sender: UIButton) {
-        print("tapped")
-        
-        print(selectDate)
         if (selectDate != nil) {
             print("there is a selected date")
+            let controller = storyboard?.instantiateViewController(withIdentifier: "ChildrensTableViewController") as! ChildrensTableViewController
+            controller.selectDate = self.selectDate
+            navigationController?.pushViewController(controller, animated: true)
         } else {
-            print("no select date")
             let alert = UIAlertController(title: "Erreur", message: "Veuillez sélectionner une date", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
     }
     
-    func minimumDate(for calendar: FSCalendar) -> Date {
-        return Date()
-    }
+//    func minimumDate(for calendar: FSCalendar) -> Date {
+//        return Date()
+//    }
     
     
     /*

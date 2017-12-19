@@ -322,7 +322,7 @@
         <!--Data Source-->
         <scene sceneID="pxf-Vp-u65">
             <objects>
-                <viewController id="Z8o-04-cVC" customClass="CalendarViewController" customModule="captain_kids" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarViewController" id="Z8o-04-cVC" customClass="CalendarViewController" customModule="captain_kids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GvU-Pk-T1g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -364,6 +364,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXU-KS-6GF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2689" y="133"/>
+        </scene>
+        <!--Childrens Table View Controller-->
+        <scene sceneID="oB3-2K-zqP">
+            <objects>
+                <tableViewController storyboardIdentifier="ChildrensTableViewController" id="6lr-BE-9xc" customClass="ChildrensTableViewController" customModule="captain_kids" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EQ5-Ts-ucf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zxJ-Gl-3Ez">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zxJ-Gl-3Ez" id="IN0-5j-hHg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6lr-BE-9xc" id="Flz-cj-VHL"/>
+                            <outlet property="delegate" destination="6lr-BE-9xc" id="R5l-RS-Nu4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZc-Fo-Tfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3711" y="133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TTE-zG-GjK">
