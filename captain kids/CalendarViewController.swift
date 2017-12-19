@@ -16,9 +16,10 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     @IBOutlet weak var calendar: FSCalendar!
     var selectDate: Date? = nil
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        calendar.today = nil
         
         // Do any additional setup after loading the view.
     }
@@ -46,7 +47,13 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         }
     }
     
+    func minimumDate(for calendar: FSCalendar) -> Date {
+        return Date()
+    }
+    
+    
     /*
+     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
