@@ -29,12 +29,17 @@ class HomeViewController: UIViewController {
             print(user!.email!)
             displayNameLabel.text = "Bonjour " + user!.displayName!
             ref.child("picking").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
-                print(snapshot.value)
-                if let result = snapshot.children.allObjects as? [DataSnapshot] {
-                    for child in result {
-                        var orderID = child.key as! String
-                        print(orderID)
+                print(snapshot)
+                
+                if snapshot.exists() {
+                    if let result = snapshot.children.allObjects as? [DataSnapshot] {
+                        for child in result {
+                            let id = child.key
+                            print(id)
+                        }
                     }
+                } else {
+                    print("no date")
                 }
                
             }) { (error) in

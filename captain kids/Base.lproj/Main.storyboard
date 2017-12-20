@@ -399,7 +399,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1jq-VR-Xrn" id="BLi-oG-cWc">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -459,7 +459,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cbg-c7-urF" id="PvW-r6-LXK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -479,6 +479,7 @@
                                 <connections>
                                     <action selector="handleValidate:" destination="xOx-W0-MUF" eventType="touchUpInside" id="6dJ-YP-FbM"/>
                                     <action selector="handleValidate:" destination="kC1-JI-vrF" eventType="touchUpInside" id="qwi-xQ-S91"/>
+                                    <segue destination="a9v-m3-rIT" kind="show" identifier="goBackToHome" id="QoY-gc-Vx6"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-ye-8Zc">
@@ -532,4 +533,7 @@
             <point key="canvasLocation" x="964.79999999999995" y="133.13343328335833"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QoY-gc-Vx6"/>
+    </inferredMetricsTieBreakers>
 </document>
