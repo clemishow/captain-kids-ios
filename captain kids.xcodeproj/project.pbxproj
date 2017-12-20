@@ -18,6 +18,7 @@
 		D7672ADE1FE8368D003B6FD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7672ADD1FE8368C003B6FD8 /* GoogleService-Info.plist */; };
 		D7672AE01FE85712003B6FD8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */; };
 		D7672AE21FE85C0C003B6FD8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7672AE11FE85C0C003B6FD8 /* HomeViewController.swift */; };
+		D7B3AA811FEAA39A00E36CCD /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B3AA801FEAA39A00E36CCD /* ConfirmationViewController.swift */; };
 		FAFE092CF9118CADE57EA7C4 /* Pods_captain_kids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E56AA2FA94EDFD3BB250546 /* Pods_captain_kids.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		D7672ADD1FE8368C003B6FD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D7672AE11FE85C0C003B6FD8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D7B3AA801FEAA39A00E36CCD /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				D737ACAC1FE9123C00722E6E /* CalendarViewController.swift */,
 				D72DCC541FE974BE001C6AD3 /* ChildrensViewController.swift */,
 				D72DCC561FE97E80001C6AD3 /* Children.swift */,
+				D7B3AA801FEAA39A00E36CCD /* ConfirmationViewController.swift */,
 			);
 			path = "captain kids";
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				D70D999F1FE8086700A8106C /* ViewController.swift in Sources */,
 				D70D999D1FE8086700A8106C /* AppDelegate.swift in Sources */,
 				D7672AE21FE85C0C003B6FD8 /* HomeViewController.swift in Sources */,
+				D7B3AA811FEAA39A00E36CCD /* ConfirmationViewController.swift in Sources */,
 				D72DCC551FE974BE001C6AD3 /* ChildrensViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

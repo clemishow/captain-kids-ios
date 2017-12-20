@@ -70,6 +70,7 @@ class ChildrensViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         cell.textLabel?.text = list[indexPath.row].name
+        cell.backgroundColor = UIColor.clear
         
         return(cell)
     }
@@ -78,9 +79,14 @@ class ChildrensViewController: UIViewController, UITableViewDelegate, UITableVie
         let selectedChildrens = self.tableView.indexPathsForSelectedRows?.map { list[$0.row] }
         print(selectedChildrens)
         if selectedChildrens != nil {
-            print("chidrens")
+            let controller = storyboard?.instantiateViewController(withIdentifier: "ConfirmationViewController") as! ConfirmationViewController
+            controller.selectDate = self.selectDate
+            controller.selectedChildrens = selectedChildrens
+            navigationController?.pushViewController(controller, animated: true)
         } else {
-            print("no children selected")
+            let alert = UIAlertController(title: "Erreur", message: "Veuillez sélectionner au moins un enfant", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -92,11 +98,14 @@ class ChildrensViewController: UIViewController, UITableViewDelegate, UITableVie
         let y = (tableView.frame.height / 2) - (height / 2) - (navigationController?.navigationBar.frame.height)!
         loadingView.frame = CGRect(x: x, y: y, width: width, height: height)
         
+        // Background UITableView
+        self.tableView.isHidden = true
+        
         // Sets loading text
         loadingLabel.textColor = .gray
         loadingLabel.textAlignment = .center
         loadingLabel.text = "Chargement..."
-        loadingLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 30)
+        loadingLabel.frame = CGRect(x: 0, y: 0, width: 180, height: 30)
         
         // Sets spinner
         spinner.activityIndicatorViewStyle = .gray
@@ -115,5 +124,7 @@ class ChildrensViewController: UIViewController, UITableViewDelegate, UITableVie
         spinner.stopAnimating()
         spinner.isHidden = true
         loadingLabel.isHidden = true
+        // Background UITableView
+        self.tableView.isHidden = false
     }
 }
