@@ -267,6 +267,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="4LU-BH-BYp">
+                                <rect key="frame" x="147" y="79" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="gxL-IH-WEF"/>
+                                    <constraint firstAttribute="width" constant="80" id="kfd-S3-rJB"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpD-5h-U75">
                                 <rect key="frame" x="164" y="323.5" width="47.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -299,10 +306,12 @@
                         <constraints>
                             <constraint firstItem="JyD-bG-FJ0" firstAttribute="trailing" secondItem="hF0-RL-o2C" secondAttribute="trailing" id="0j9-Ww-X7o"/>
                             <constraint firstItem="DdT-3D-X52" firstAttribute="top" secondItem="hF0-RL-o2C" secondAttribute="bottom" constant="30" id="9zA-fv-Ue6"/>
+                            <constraint firstItem="4LU-BH-BYp" firstAttribute="centerX" secondItem="DgP-tt-Zk8" secondAttribute="centerX" id="B6N-UZ-14X"/>
                             <constraint firstItem="hF0-RL-o2C" firstAttribute="centerX" secondItem="DgP-tt-Zk8" secondAttribute="centerX" id="KBQ-Un-brm"/>
                             <constraint firstItem="DdT-3D-X52" firstAttribute="leading" secondItem="JyD-bG-FJ0" secondAttribute="leading" id="Rca-4B-dyk"/>
                             <constraint firstItem="hF0-RL-o2C" firstAttribute="top" secondItem="PpD-5h-U75" secondAttribute="bottom" constant="90" id="T2w-hb-dMA"/>
                             <constraint firstItem="PpD-5h-U75" firstAttribute="centerY" secondItem="DgP-tt-Zk8" secondAttribute="centerY" id="bif-C7-1GL"/>
+                            <constraint firstItem="4LU-BH-BYp" firstAttribute="top" secondItem="JyD-bG-FJ0" secondAttribute="top" constant="15" id="iCQ-3l-qR5"/>
                             <constraint firstItem="JyD-bG-FJ0" firstAttribute="trailing" secondItem="DdT-3D-X52" secondAttribute="trailing" id="iHh-DU-CeN"/>
                             <constraint firstItem="hF0-RL-o2C" firstAttribute="leading" secondItem="JyD-bG-FJ0" secondAttribute="leading" id="igH-fi-TyR"/>
                             <constraint firstItem="DdT-3D-X52" firstAttribute="centerX" secondItem="DgP-tt-Zk8" secondAttribute="centerX" id="jTF-z2-a1G"/>
@@ -313,11 +322,12 @@
                     <navigationItem key="navigationItem" title="Faire un choix" id="9wh-TZ-4Gs"/>
                     <connections>
                         <outlet property="displayNameLabel" destination="PpD-5h-U75" id="byB-Ll-3sK"/>
+                        <outlet property="profileImageView" destination="4LU-BH-BYp" id="i7j-nQ-Phd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJx-jd-qyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1831" y="133"/>
+            <point key="canvasLocation" x="1829.5999999999999" y="132.68365817091455"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="pxf-Vp-u65">
@@ -533,6 +543,9 @@
             <point key="canvasLocation" x="964.79999999999995" y="133.13343328335833"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="profile" width="455" height="455"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QoY-gc-Vx6"/>
     </inferredMetricsTieBreakers>

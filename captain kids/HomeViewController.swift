@@ -14,15 +14,26 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var displayNameLabel: UILabel!
     var ref: DatabaseReference!
+    @IBOutlet weak var profileImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let user = Auth.auth().currentUser
+        
         ref = Database.database().reference()
         
+        self.getAPI()
         
+        // Circle image profile
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
+        profileImageView.clipsToBounds = true
+        profileImageView.layer.borderWidth = 2
+        profileImageView.layer.borderColor = UIColor(red: 10/255, green: 197/255, blue: 211/255, alpha: 1.0).cgColor
         
+    }
+    
+    func getAPI() {
+        let user = Auth.auth().currentUser
         if user != nil {
             print("user sign in")
             print(user!)
@@ -41,14 +52,13 @@ class HomeViewController: UIViewController {
                 } else {
                     print("no date")
                 }
-               
+                
             }) { (error) in
                 print(error.localizedDescription)
             }
         } else {
             print("no user sign in")
         }
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
