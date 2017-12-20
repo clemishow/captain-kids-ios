@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import MapKit
 
 class ConfirmationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var selectedChildrens: [Children]?
     var selectDate: Date?
-
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -22,6 +23,15 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
         print(selectedChildrens)
         self.tableView.allowsSelection = false
         self.title = "Récapitulatif"
+        
+        self.initMap()
+    }
+    
+    func initMap() {
+        let annotation = MKPointAnnotation()
+        
+        annotation.coordinate = CLLocationCoordinate2D(latitude: 48.864682, longitude: 2.354719)
+        mapView.addAnnotation(annotation)
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,8 +14,10 @@ class MainNavigationViewController: UINavigationController {
         super.viewDidLoad()
         
         navigationBar.barTintColor = UIColor(red: 10/255, green: 197/255, blue: 211/255, alpha: 1)
+        navigationBar.tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         UIApplication.shared.statusBarStyle = .lightContent
+        
         
     }
 
