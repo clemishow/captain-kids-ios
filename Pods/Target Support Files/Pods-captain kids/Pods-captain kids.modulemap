@@ -1,6 +1,0 @@
-framework module Pods_captain_kids {
-  umbrella header "Pods-captain kids-umbrella.h"
-
-  export *
-  module * { export * }
-}
