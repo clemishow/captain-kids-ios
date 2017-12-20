@@ -452,7 +452,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ICh-kr-9gp">
-                                <rect key="frame" x="0.0" y="20" width="375" height="381"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="282"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="cbg-c7-urF">
@@ -478,12 +478,13 @@
                                 <state key="normal" title="VALIDER"/>
                                 <connections>
                                     <action selector="handleValidate:" destination="xOx-W0-MUF" eventType="touchUpInside" id="6dJ-YP-FbM"/>
+                                    <action selector="handleValidate:" destination="kC1-JI-vrF" eventType="touchUpInside" id="qwi-xQ-S91"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-ye-8Zc">
-                                <rect key="frame" x="0.0" y="401" width="375" height="201"/>
+                                <rect key="frame" x="0.0" y="302" width="375" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="201" id="45H-Ej-ugs"/>
+                                    <constraint firstAttribute="height" constant="300" id="45H-Ej-ugs"/>
                                 </constraints>
                             </mapView>
                         </subviews>
@@ -497,9 +498,9 @@
                             <constraint firstItem="jxc-xP-qAl" firstAttribute="top" secondItem="tEh-ye-8Zc" secondAttribute="bottom" id="Skt-JI-Aoc"/>
                             <constraint firstItem="tEh-ye-8Zc" firstAttribute="leading" secondItem="jxc-xP-qAl" secondAttribute="leading" id="Tpr-7D-YMQ"/>
                             <constraint firstItem="ICh-kr-9gp" firstAttribute="trailing" secondItem="NVf-Sm-ZQS" secondAttribute="trailing" id="d8J-lZ-XAL"/>
-                            <constraint firstItem="tEh-ye-8Zc" firstAttribute="top" secondItem="ICh-kr-9gp" secondAttribute="bottom" id="eoG-61-QON"/>
                             <constraint firstItem="ICh-kr-9gp" firstAttribute="top" secondItem="NVf-Sm-ZQS" secondAttribute="top" id="gB9-1j-LMd"/>
                             <constraint firstItem="tEh-ye-8Zc" firstAttribute="trailing" secondItem="jxc-xP-qAl" secondAttribute="trailing" id="hsf-oK-EQi"/>
+                            <constraint firstItem="tEh-ye-8Zc" firstAttribute="top" secondItem="ICh-kr-9gp" secondAttribute="bottom" id="j0T-KR-YVS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NVf-Sm-ZQS"/>
                     </view>

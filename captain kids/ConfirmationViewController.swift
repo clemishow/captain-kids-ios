@@ -8,11 +8,25 @@
 
 import UIKit
 import MapKit
+import FirebaseDatabase
+import FirebaseAuth
+
+extension Array {
+    public func toDictionary<Key: Hashable>(with selectKey: (Element) -> Key) -> [Key:Element] {
+        var dict = [Key:Element]()
+        for element in self {
+            dict[selectKey(element)] = element
+        }
+        return dict
+    }
+}
+
 
 class ConfirmationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var selectedChildrens: [Children]!
     var selectDate: Date?
+    var ref: DatabaseReference!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -57,12 +71,47 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
         return selectedChildrens!.count
     }
     
+    func postPicking() {
+        ref = Database.database().reference()
+        let user = Auth.auth().currentUser
+        if let user = user {
+            
+            var pickingData = [[String: Any]]()
+            
+            
+            for children in selectedChildrens {
+                let data: [String: Any] = [
+                    "name": children.name!,
+                    "lat": children.lat!,
+                    "lng": children.lng!,
+                    "male": children.male!
+                ]
+                pickingData.append(data)
+            }
+            
+            // Format date to string
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            
+            pickingData.append(["date": formatter.string(from: selectDate!)])
+            
+            print(pickingData)
+            self.ref.child("picking").child(user.uid).childByAutoId().setValue(pickingData) { err, ref in
+                print("done")
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         cell.textLabel?.text = selectedChildrens![indexPath.row].name
         cell.backgroundColor = UIColor.clear
         
         return(cell)
+    }
+    
+    @IBAction func handleValidate(_ sender: UIButton) {
+        self.postPicking()
     }
     
 }
