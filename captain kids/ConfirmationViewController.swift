@@ -11,7 +11,7 @@ import MapKit
 
 class ConfirmationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var selectedChildrens: [Children]?
+    var selectedChildrens: [Children]!
     var selectDate: Date?
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
@@ -28,10 +28,24 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func initMap() {
-        let annotation = MKPointAnnotation()
+        let span = MKCoordinateSpanMake(0.02, 0.02)
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 48.852626, longitude: 2.369311), span: span)
+        mapView.setRegion(region, animated: true)
         
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 48.864682, longitude: 2.354719)
-        mapView.addAnnotation(annotation)
+        self.createMarkers()
+    }
+    
+    func createMarkers() {
+        var annotations: [MKAnnotation] = []
+        for children in selectedChildrens {
+            print(children)
+            let annotation = MKPointAnnotation()
+            annotation.title = children.name!
+            annotation.coordinate = CLLocationCoordinate2D(latitude: children.lat!, longitude: children.lng!)
+            mapView.addAnnotation(annotation)
+            annotations.append(annotation)
+        }
+        mapView.showAnnotations(annotations, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
