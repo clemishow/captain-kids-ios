@@ -20,6 +20,7 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
         
         print(selectDate)
         print(selectedChildrens)
+        self.tableView.allowsSelection = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,7 +28,7 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(selectedChildrens?.count)
+        print(selectedChildrens!.count)
         return selectedChildrens!.count
     }
     

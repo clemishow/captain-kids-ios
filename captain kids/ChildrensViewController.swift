@@ -75,6 +75,18 @@ class ChildrensViewController: UIViewController, UITableViewDelegate, UITableVie
         return(cell)
     }
     
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if let selectedRows = tableView.indexPathsForSelectedRows?.filter({ $0.section == indexPath.section }) {
+            if selectedRows.count > 3 {
+                let alert = UIAlertController(title: "Erreur", message: "Vous ne pouvez pas prendre plus de 4 enfants en charge", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return nil
+            }
+        }
+        return indexPath
+    }
+    
     @IBAction func handleValidate(_ sender: UIButton) {
         let selectedChildrens = self.tableView.indexPathsForSelectedRows?.map { list[$0.row] }
         print(selectedChildrens)
