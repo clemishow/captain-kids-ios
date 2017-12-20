@@ -15,6 +15,7 @@
 		D72DCC551FE974BE001C6AD3 /* ChildrensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DCC541FE974BE001C6AD3 /* ChildrensViewController.swift */; };
 		D72DCC571FE97E80001C6AD3 /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DCC561FE97E80001C6AD3 /* Children.swift */; };
 		D737ACAD1FE9123C00722E6E /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D737ACAC1FE9123C00722E6E /* CalendarViewController.swift */; };
+		D73FEE4F1FEACF68002E7DE0 /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73FEE4E1FEACF68002E7DE0 /* MainNavigationViewController.swift */; };
 		D7672ADE1FE8368D003B6FD8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7672ADD1FE8368C003B6FD8 /* GoogleService-Info.plist */; };
 		D7672AE01FE85712003B6FD8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */; };
 		D7672AE21FE85C0C003B6FD8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7672AE11FE85C0C003B6FD8 /* HomeViewController.swift */; };
@@ -36,6 +37,7 @@
 		D72DCC541FE974BE001C6AD3 /* ChildrensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildrensViewController.swift; sourceTree = "<group>"; };
 		D72DCC561FE97E80001C6AD3 /* Children.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
 		D737ACAC1FE9123C00722E6E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		D73FEE4E1FEACF68002E7DE0 /* MainNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 		D7672ADD1FE8368C003B6FD8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D7672AE11FE85C0C003B6FD8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				D72DCC541FE974BE001C6AD3 /* ChildrensViewController.swift */,
 				D72DCC561FE97E80001C6AD3 /* Children.swift */,
 				D7B3AA801FEAA39A00E36CCD /* ConfirmationViewController.swift */,
+				D73FEE4E1FEACF68002E7DE0 /* MainNavigationViewController.swift */,
 			);
 			path = "captain kids";
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72DCC571FE97E80001C6AD3 /* Children.swift in Sources */,
+				D73FEE4F1FEACF68002E7DE0 /* MainNavigationViewController.swift in Sources */,
 				D737ACAD1FE9123C00722E6E /* CalendarViewController.swift in Sources */,
 				D7672AE01FE85712003B6FD8 /* RegisterViewController.swift in Sources */,
 				D70D999F1FE8086700A8106C /* ViewController.swift in Sources */,

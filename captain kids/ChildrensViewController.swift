@@ -33,6 +33,8 @@ class ChildrensViewController: UIViewController, UITableViewDelegate, UITableVie
         
         print(selectDate)
         
+        self.title = "Choissiez les enfants"
+        
         tableView.allowsMultipleSelection = true
     }
     

@@ -21,6 +21,8 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         
         calendar.today = nil
         print(Date())
+        
+        self.title = "Choissisez une date"
     }
 
     override func didReceiveMemoryWarning() {

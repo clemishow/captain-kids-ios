@@ -21,6 +21,7 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
         print(selectDate)
         print(selectedChildrens)
         self.tableView.allowsSelection = false
+        self.title = "Récapitulatif"
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,9 +41,4 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
         return(cell)
     }
     
-    
-    
-
-  
-
 }
