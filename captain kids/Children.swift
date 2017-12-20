@@ -19,6 +19,7 @@ class Children {
         self.name = name
         self.lat = lat
         self.lng = lng
+        self.male = male
     }
     
 }
