@@ -13,6 +13,8 @@ import FirebaseDatabase
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var beAccompagnyButton: UIButton!
+    @IBOutlet weak var toAccompagnyButton: UIButton!
     @IBOutlet weak var displayNameLabel: UILabel!
     var ref: DatabaseReference!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -30,6 +32,9 @@ class HomeViewController: UIViewController {
         profileImageView.clipsToBounds = true
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.borderColor = UIColor(red: 10/255, green: 197/255, blue: 211/255, alpha: 1.0).cgColor
+        toAccompagnyButton.setTitleColor(Color.blue(), for: .normal)
+        beAccompagnyButton.setTitleColor(Color.blue(), for: .normal)
+        
     }
     
     func getAPI() {

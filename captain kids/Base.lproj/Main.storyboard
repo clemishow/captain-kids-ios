@@ -355,24 +355,32 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gBy-GP-Mw1">
                                 <rect key="frame" x="0.0" y="266" width="375" height="160"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Z-B7-1JW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Z-B7-1JW">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="vs3-bS-uUE"/>
                                         </constraints>
-                                        <state key="normal" title="Être accompagnateur"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Être accompagnateur" image="icon-car">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="toAccompagny:" destination="yJC-s5-eiY" eventType="touchUpInside" id="g1m-Oi-HSf"/>
                                             <segue destination="Z8o-04-cVC" kind="show" id="LyZ-0A-fvW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dd-AJ-ysn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dd-AJ-ysn">
                                         <rect key="frame" x="0.0" y="80" width="375" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="EOT-Ei-YXP"/>
                                         </constraints>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <size key="titleShadowOffset" width="0.0" height="80"/>
-                                        <state key="normal" title="Faire raccompagner mes enfants"/>
+                                        <state key="normal" title="Faire raccompagner mes enfants" image="icon-bag">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="beAccompagny:" destination="yJC-s5-eiY" eventType="touchUpInside" id="clF-xy-yXf"/>
                                         </connections>
@@ -410,8 +418,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Faire un choix" id="9wh-TZ-4Gs"/>
                     <connections>
+                        <outlet property="beAccompagnyButton" destination="9dd-AJ-ysn" id="xGJ-f4-qHb"/>
                         <outlet property="displayNameLabel" destination="PpD-5h-U75" id="byB-Ll-3sK"/>
                         <outlet property="profileImageView" destination="4LU-BH-BYp" id="i7j-nQ-Phd"/>
+                        <outlet property="toAccompagnyButton" destination="f3Z-B7-1JW" id="unb-fo-GvB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJx-jd-qyM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -634,6 +644,8 @@
     </scenes>
     <resources>
         <image name="clouds" width="369" height="112"/>
+        <image name="icon-bag" width="60" height="60"/>
+        <image name="icon-car" width="60" height="60"/>
         <image name="landscape" width="375" height="249"/>
         <image name="profile" width="455" height="455"/>
     </resources>
