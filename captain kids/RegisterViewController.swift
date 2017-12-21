@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseAnalytics
 
 class RegisterViewController: UIViewController {
 
@@ -46,8 +47,13 @@ class RegisterViewController: UIViewController {
                     let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                     changeRequest?.displayName = name
                     changeRequest?.commitChanges { (error) in
-                        print(error!)
+                        print(error)
                     }
+                    
+                    // Firebase event register successfully
+                    Analytics.logEvent("register", parameters: [
+                        "register_profile_type": "parent"
+                    ])
                     
                     // Alert to handle redirection after register
                     alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {

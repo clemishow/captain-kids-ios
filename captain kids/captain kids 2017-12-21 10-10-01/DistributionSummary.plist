@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>captain kids.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>D76CCBD204CF999D3F09D555DFBA3BAB1FC1888F</string>
+				<key>dateExpires</key>
+				<string>26/09/2018</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>D76CCBD204CF999D3F09D555DFBA3BAB1FC1888F</string>
+						<key>dateExpires</key>
+						<string>26/09/2018</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>FSCalendar.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>H27QMYNTH5</string>
+						<key>name</key>
+						<string>Clément Saulnier</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>D76CCBD204CF999D3F09D555DFBA3BAB1FC1888F</string>
+						<key>dateExpires</key>
+						<string>26/09/2018</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>GTMSessionFetcher.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>H27QMYNTH5</string>
+						<key>name</key>
+						<string>Clément Saulnier</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>D76CCBD204CF999D3F09D555DFBA3BAB1FC1888F</string>
+						<key>dateExpires</key>
+						<string>26/09/2018</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>GoogleToolboxForMac.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>H27QMYNTH5</string>
+						<key>name</key>
+						<string>Clément Saulnier</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>D76CCBD204CF999D3F09D555DFBA3BAB1FC1888F</string>
+						<key>dateExpires</key>
+						<string>26/09/2018</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>leveldb.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>H27QMYNTH5</string>
+						<key>name</key>
+						<string>Clément Saulnier</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>D76CCBD204CF999D3F09D555DFBA3BAB1FC1888F</string>
+						<key>dateExpires</key>
+						<string>26/09/2018</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>name</key>
+					<string>nanopb.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>H27QMYNTH5</string>
+						<key>name</key>
+						<string>Clément Saulnier</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>H27QMYNTH5.fr.cs.captain-kids</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>H27QMYNTH5</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>H27QMYNTH5.fr.cs.captain-kids</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>captain kids.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>1b9c8777-d974-46a8-8cb8-fe1374e4c848</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: *</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>H27QMYNTH5</string>
+				<key>name</key>
+				<string>Clément Saulnier</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

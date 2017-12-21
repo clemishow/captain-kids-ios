@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 import FirebaseAuth
 import FirebaseDatabase
 
@@ -60,21 +61,24 @@ class HomeViewController: UIViewController {
             print("no user sign in")
         }
     }
-
+    
+    @IBAction func toAccompagny(_ sender: UIButton) {
+        // Firebase event button choice
+        Analytics.logEvent("select_usage", parameters: [
+            "usage_type": "être accompagnateur"
+        ])
+    }
+    
+    @IBAction func beAccompagny(_ sender: UIButton) {
+        Analytics.logEvent("select_usage", parameters: [
+            "select_type": "faire raccompagner"
+        ])
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

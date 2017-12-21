@@ -10,17 +10,7 @@ import UIKit
 import MapKit
 import FirebaseDatabase
 import FirebaseAuth
-
-extension Array {
-    public func toDictionary<Key: Hashable>(with selectKey: (Element) -> Key) -> [Key:Element] {
-        var dict = [Key:Element]()
-        for element in self {
-            dict[selectKey(element)] = element
-        }
-        return dict
-    }
-}
-
+import FirebaseAnalytics
 
 class ConfirmationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -33,12 +23,14 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(selectDate)
-        print(selectedChildrens)
         self.tableView.allowsSelection = false
         self.title = "Récapitulatif"
         
         self.initMap()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     func initMap() {
@@ -62,18 +54,30 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
         mapView.showAnnotations(annotations, animated: true)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(selectedChildrens!.count)
         return selectedChildrens!.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        cell.textLabel?.text = selectedChildrens![indexPath.row].name
+        cell.backgroundColor = UIColor.clear
+        
+        return(cell)
+    }
+    
+    // Post data of user selection (date + list)
     func postPicking() {
         ref = Database.database().reference()
         let user = Auth.auth().currentUser
+        
+        // Firebase event number of childrens choosen
+        Analytics.logEvent("selected_childrens", parameters: [
+            "number": selectedChildrens.count
+        ])
+        
         if let user = user {
             
             var pickingData = [[String: Any]]()
@@ -101,14 +105,6 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
                 self.performSegue(withIdentifier: "goBackToHome", sender: self)
             }
         }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = selectedChildrens![indexPath.row].name
-        cell.backgroundColor = UIColor.clear
-        
-        return(cell)
     }
     
     @IBAction func handleValidate(_ sender: UIButton) {

@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseAnalytics
 
 class ViewController: UIViewController {
     
@@ -37,6 +38,9 @@ class ViewController: UIViewController {
                 alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default,handler: nil))
                 
                 if let u = user {
+                    // Firebase event register successfully
+                    Analytics.logEvent("login", parameters: nil)
+                    
                     // Work
                     self.performSegue(withIdentifier: "goToHomePage", sender: self)
                 } else {
