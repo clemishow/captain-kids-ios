@@ -275,6 +275,7 @@
                         <viewLayoutGuide key="safeArea" id="miB-if-0no"/>
                     </view>
                     <connections>
+                        <outlet property="ageTextField" destination="gSM-Qq-cgM" id="e47-sq-PvA"/>
                         <outlet property="displayNameTextField" destination="CSE-BW-dnr" id="iSM-Vo-t4Y"/>
                         <outlet property="emailTextField" destination="koA-qv-CVZ" id="i4X-KJ-no1"/>
                         <outlet property="passwordTextField" destination="Wyd-UT-wRu" id="UFI-7q-7EF"/>

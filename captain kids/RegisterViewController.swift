@@ -9,17 +9,39 @@
 import UIKit
 import FirebaseAuth
 import FirebaseAnalytics
+import FirebaseDatabase
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var displayNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        
+        displayNameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        ageTextField.delegate = self
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+         view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        displayNameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        ageTextField.resignFirstResponder()
+        return true
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +57,8 @@ class RegisterViewController: UIViewController {
         // Register with Firebase
         if let email = emailTextField.text, !email.isEmpty,
            let password = passwordTextField.text, !password.isEmpty,
-           let name = displayNameTextField.text, !name.isEmpty {
+           let name = displayNameTextField.text, !name.isEmpty,
+           let age = ageTextField.text, !age.isEmpty {
             Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                 
                 if let u = user {
@@ -43,17 +66,26 @@ class RegisterViewController: UIViewController {
                     alertController.title = "Compte crée"
                     alertController.message = "Votre compte a bien été crée. Vous pouvez désormais vous connecter"
                     
+                    // Put age on Firebase database
+                    print(age)
+                    print(user!.uid)
+                    
                     // Add a display name
                     let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                     changeRequest?.displayName = name
                     changeRequest?.commitChanges { (error) in
+                        print("error")
                         print(error)
                     }
+                    
+                    self.ref.child("users").child(user!.uid).setValue(["age": age])
                     
                     // Firebase event register successfully
                     Analytics.logEvent("register", parameters: [
                         "register_profile_type": "parent"
                     ])
+                    
+                    Analytics.setUserProperty(age, forName: "age")
                     
                     // Alert to handle redirection after register
                     alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
@@ -90,17 +122,4 @@ class RegisterViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
     }
-    
-   
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

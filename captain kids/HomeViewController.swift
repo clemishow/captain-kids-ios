@@ -30,7 +30,6 @@ class HomeViewController: UIViewController {
         profileImageView.clipsToBounds = true
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.borderColor = UIColor(red: 10/255, green: 197/255, blue: 211/255, alpha: 1.0).cgColor
-        
     }
     
     func getAPI() {
@@ -42,7 +41,6 @@ class HomeViewController: UIViewController {
             displayNameLabel.text = "Bonjour " + user!.displayName!
             ref.child("picking").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
                 print(snapshot)
-                
                 if snapshot.exists() {
                     if let result = snapshot.children.allObjects as? [DataSnapshot] {
                         for child in result {
