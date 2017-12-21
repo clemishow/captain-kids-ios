@@ -34,11 +34,15 @@ class HomeViewController: UIViewController {
         profileImageView.layer.borderColor = UIColor(red: 10/255, green: 197/255, blue: 211/255, alpha: 1.0).cgColor
         toAccompagnyButton.setTitleColor(Color.blue(), for: .normal)
         beAccompagnyButton.setTitleColor(Color.blue(), for: .normal)
-        
+    
+        Button.addBorderTop(button: toAccompagnyButton)
+        Button.addBorderTop(button: beAccompagnyButton)
+        Button.addBorderBottom(button: beAccompagnyButton)
     }
     
     func getAPI() {
         let user = Auth.auth().currentUser
+        
         if user != nil {
             displayNameLabel.text = "Bonjour " + user!.displayName!
             ref.child("picking").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in

@@ -29,4 +29,18 @@ class Button {
             .normal)
     }
     
+    static func addBorderTop(button: UIButton) {
+        let border = CALayer()
+        border.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 229/255, alpha: 1.0).cgColor
+        border.frame = CGRect(x: 0, y: 0, width: button.frame.size.width + 40, height: 1)
+        button.layer.addSublayer(border)
+    }
+    
+    static func addBorderBottom(button: UIButton) {
+        let border = CALayer()
+        border.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 229/255, alpha: 1.0).cgColor
+        border.frame = CGRect(x: 0, y: button.frame.size.height - 1, width: button.frame.size.width + 40, height: 1)
+        button.layer.addSublayer(border)
+    }
+    
 }
