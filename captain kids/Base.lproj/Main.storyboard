@@ -111,6 +111,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="connexionUIButton" destination="bFP-d9-HQB" id="65w-lB-HxG"/>
                         <outlet property="emailTextField" destination="Z2H-YV-BwG" id="3oI-4M-m5f"/>
                         <outlet property="passwordTextField" destination="spQ-H1-BU1" id="2Jt-ih-bzs"/>
                         <segue destination="a9v-m3-rIT" kind="show" identifier="goToHomePage" id="Yff-YD-U88"/>

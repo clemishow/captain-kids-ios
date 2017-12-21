@@ -21,6 +21,9 @@
 		D7672AE01FE85712003B6FD8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */; };
 		D7672AE21FE85C0C003B6FD8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7672AE11FE85C0C003B6FD8 /* HomeViewController.swift */; };
 		D79487AD1FEC4E89005214E9 /* BackgroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79487AC1FEC4E89005214E9 /* BackgroundGradient.swift */; };
+		D79487AF1FEC5191005214E9 /* TextFieldCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79487AE1FEC5191005214E9 /* TextFieldCustom.swift */; };
+		D79487B11FEC5E00005214E9 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79487B01FEC5E00005214E9 /* Button.swift */; };
+		D79487B31FEC5F4F005214E9 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79487B21FEC5F4F005214E9 /* Colors.swift */; };
 		D7B3AA811FEAA39A00E36CCD /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B3AA801FEAA39A00E36CCD /* ConfirmationViewController.swift */; };
 		FAFE092CF9118CADE57EA7C4 /* Pods_captain_kids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E56AA2FA94EDFD3BB250546 /* Pods_captain_kids.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +48,9 @@
 		D7672ADF1FE85712003B6FD8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D7672AE11FE85C0C003B6FD8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D79487AC1FEC4E89005214E9 /* BackgroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGradient.swift; sourceTree = "<group>"; };
+		D79487AE1FEC5191005214E9 /* TextFieldCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCustom.swift; sourceTree = "<group>"; };
+		D79487B01FEC5E00005214E9 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		D79487B21FEC5F4F005214E9 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D7B3AA801FEAA39A00E36CCD /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				D79487AC1FEC4E89005214E9 /* BackgroundGradient.swift */,
+				D79487AE1FEC5191005214E9 /* TextFieldCustom.swift */,
+				D79487B01FEC5E00005214E9 /* Button.swift */,
+				D79487B21FEC5F4F005214E9 /* Colors.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -273,11 +282,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D72DCC571FE97E80001C6AD3 /* Children.swift in Sources */,
+				D79487AF1FEC5191005214E9 /* TextFieldCustom.swift in Sources */,
 				D73FEE4F1FEACF68002E7DE0 /* MainNavigationViewController.swift in Sources */,
 				D737ACAD1FE9123C00722E6E /* CalendarViewController.swift in Sources */,
 				D7672AE01FE85712003B6FD8 /* RegisterViewController.swift in Sources */,
 				D70D999F1FE8086700A8106C /* ViewController.swift in Sources */,
 				D70D999D1FE8086700A8106C /* AppDelegate.swift in Sources */,
+				D79487B11FEC5E00005214E9 /* Button.swift in Sources */,
+				D79487B31FEC5F4F005214E9 /* Colors.swift in Sources */,
 				D7672AE21FE85C0C003B6FD8 /* HomeViewController.swift in Sources */,
 				D7B3AA811FEAA39A00E36CCD /* ConfirmationViewController.swift in Sources */,
 				D72DCC551FE974BE001C6AD3 /* ChildrensViewController.swift in Sources */,

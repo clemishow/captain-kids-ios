@@ -13,6 +13,7 @@ import FirebaseAnalytics
 class ViewController: UIViewController, UITextFieldDelegate {
     
     
+    @IBOutlet weak var connexionUIButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -23,10 +24,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate = self
         
         BackgroundGradient.initialize(view: self.view)
+        
+        Button.whiteRounded(button: connexionUIButton)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        TextFieldCustom.initialize(textField: emailTextField)
+        TextFieldCustom.initialize(textField: passwordTextField)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
