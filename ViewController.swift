@@ -13,6 +13,9 @@ import FirebaseAnalytics
 class ViewController: UIViewController, UITextFieldDelegate {
     
     
+    @IBOutlet weak var pageTitle: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var connexionUIButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -26,6 +29,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         BackgroundGradient.initialize(view: self.view)
         
         Button.whiteRounded(button: connexionUIButton)
+        passwordLabel.textColor = UIColor.white
+        emailLabel.textColor = UIColor.white
+        pageTitle.textColor = UIColor.white
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

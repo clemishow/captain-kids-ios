@@ -14,7 +14,11 @@ class Button {
     static func whiteRounded(button: UIButton) {
         button.setTitle(button.titleLabel!.text?.uppercased(), for: .normal)
         button.backgroundColor = UIColor.white
-        
-        button.layer.cornerRadius = 10
+        button.setTitleColor(Color.blue(), for: .normal)
+        button.frame.size.height = 80
+        button.frame.size.width = 300
+        button.layer.cornerRadius = 25
+        button.clipsToBounds = true
     }
+    
 }

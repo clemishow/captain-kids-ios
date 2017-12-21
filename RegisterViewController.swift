@@ -13,6 +13,7 @@ import FirebaseDatabase
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var registerButton: UIButton!
     @IBOutlet var UIView: UIView!
     @IBOutlet weak var displayNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -31,6 +32,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         ageTextField.delegate = self
         
         BackgroundGradient.initialize(view: self.view)
+        Button.whiteRounded(button: registerButton)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        TextFieldCustom.initialize(textField: displayNameTextField)
+        TextFieldCustom.initialize(textField: emailTextField)
+        TextFieldCustom.initialize(textField: passwordTextField)
+        TextFieldCustom.initialize(textField: ageTextField)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
