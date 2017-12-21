@@ -21,6 +21,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         passwordTextField.delegate = self
         emailTextField.delegate = self
+        
+        BackgroundGradient.initialize(view: self.view)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

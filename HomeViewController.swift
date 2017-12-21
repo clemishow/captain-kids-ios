@@ -35,9 +35,6 @@ class HomeViewController: UIViewController {
     func getAPI() {
         let user = Auth.auth().currentUser
         if user != nil {
-            print("user sign in")
-            print(user!)
-            print(user!.email!)
             displayNameLabel.text = "Bonjour " + user!.displayName!
             ref.child("picking").child(user!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
                 print(snapshot)

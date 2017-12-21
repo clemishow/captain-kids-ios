@@ -13,6 +13,7 @@ import FirebaseDatabase
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet var UIView: UIView!
     @IBOutlet weak var displayNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -28,20 +29,23 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         ageTextField.delegate = self
-
-        // Do any additional setup after loading the view.
+        
+        BackgroundGradient.initialize(view: self.view)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-         view.endEditing(true)
+        view.endEditing(true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        displayNameTextField.resignFirstResponder()
-        emailTextField.resignFirstResponder()
-        passwordTextField.resignFirstResponder()
-        ageTextField.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.tag == 1 {
+            print("password")
+        }
     }
 
     override func didReceiveMemoryWarning() {
