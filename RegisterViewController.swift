@@ -13,8 +13,8 @@ import FirebaseDatabase
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var connexionButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
-    @IBOutlet var UIView: UIView!
     @IBOutlet weak var displayNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -33,6 +33,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         BackgroundGradient.initialize(view: self.view)
         Button.whiteRounded(button: registerButton)
+        Button.underlineButton(text: "Me connecter", button: connexionButton, color: UIColor.white)
     }
     
     override func viewDidLayoutSubviews() {

@@ -19,6 +19,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var connexionUIButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var noAccountLabel: UILabel!
+    @IBOutlet weak var createAccountButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         passwordLabel.textColor = UIColor.white
         emailLabel.textColor = UIColor.white
         pageTitle.textColor = UIColor.white
+        noAccountLabel.textColor = UIColor.white
+        
+        Button.underlineButton(text: "Créer un compte", button: createAccountButton, color: UIColor.white)
+        createAccountButton.setTitleColor(UIColor.white, for: .normal)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
