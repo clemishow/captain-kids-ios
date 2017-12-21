@@ -416,7 +416,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JyD-bG-FJ0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Faire un choix" id="9wh-TZ-4Gs"/>
+                    <navigationItem key="navigationItem" title="Faire un choix" id="9wh-TZ-4Gs">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icon-message" id="yFc-eA-RYP"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icon-bell" id="lmY-a3-zDA"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="beAccompagnyButton" destination="9dd-AJ-ysn" id="xGJ-f4-qHb"/>
                         <outlet property="displayNameLabel" destination="PpD-5h-U75" id="byB-Ll-3sK"/>
@@ -645,7 +648,9 @@
     <resources>
         <image name="clouds" width="369" height="112"/>
         <image name="icon-bag" width="60" height="60"/>
+        <image name="icon-bell" width="21" height="24"/>
         <image name="icon-car" width="60" height="60"/>
+        <image name="icon-message" width="26" height="22"/>
         <image name="landscape" width="375" height="249"/>
         <image name="profile" width="455" height="455"/>
     </resources>
