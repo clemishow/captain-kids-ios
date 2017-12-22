@@ -18,10 +18,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         calendar.today = nil
-        print(Date())
-        
         self.title = "Choissisez une date"
     }
 

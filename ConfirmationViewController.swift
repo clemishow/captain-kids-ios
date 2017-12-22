@@ -60,12 +60,33 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
         return selectedChildrens!.count
     }
     
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+//        cell.textLabel?.text = selectedChildrens![indexPath.row].name
+//        cell.backgroundColor = UIColor.clear
+//
+//        return(cell)
+//    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = selectedChildrens![indexPath.row].name
+        if selectedChildrens[indexPath.row].male == true {
+            cell.imageView?.image = UIImage(named: "avatar-boy")
+        } else {
+            cell.imageView?.image = UIImage(named: "avatar-girl")
+        }
+        cell.textLabel?.text = selectedChildrens[indexPath.row].name
+        cell.detailTextLabel?.text = "Hello"
         cell.backgroundColor = UIColor.clear
-        
+        cell.layer.masksToBounds = true
+        cell.selectionStyle = .none
+        cell.layer.borderColor = UIColor( red: 246/255, green: 246/255, blue: 245/255, alpha: 1).cgColor
+        cell.layer.borderWidth = 2.0
         return(cell)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
     // Post data of user selection (date + list)

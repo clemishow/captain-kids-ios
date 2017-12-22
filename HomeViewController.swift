@@ -23,7 +23,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         ref = Database.database().reference()
         
         self.getAPI()

@@ -51,8 +51,7 @@ class ChildrensViewController: UIViewController, UITableViewDelegate, UITableVie
                 let newChildren = Children(name: name, lat: lat, lng: lng, male: male)
                 self.list.append(newChildren)
             }
-            print(self.list)
-            print(self.list.count)
+            
             self.tableView.reloadData()
             self.removeLoadingScreen()
         }) { (error) in
@@ -71,10 +70,38 @@ class ChildrensViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        if list[indexPath.row].male == true {
+            cell.imageView?.image = UIImage(named: "avatar-boy")
+        } else {
+            cell.imageView?.image = UIImage(named: "avatar-girl")
+        }
         cell.textLabel?.text = list[indexPath.row].name
+        cell.detailTextLabel?.text = "Hello"
         cell.backgroundColor = UIColor.clear
-        
+        cell.layer.masksToBounds = true
+        cell.selectionStyle = .none
+        cell.layer.borderColor = UIColor( red: 246/255, green: 246/255, blue: 245/255, alpha: 1).cgColor
+        cell.layer.borderWidth = 2.0
         return(cell)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! UITableViewCell
+        
+        cell.imageView?.image = UIImage(named: "avatar-validate")
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! UITableViewCell
+        if list[indexPath.row].male == true {
+            cell.imageView?.image = UIImage(named: "avatar-boy")
+        } else {
+            cell.imageView?.image = UIImage(named: "avatar-girl")
+        }
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
