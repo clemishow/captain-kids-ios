@@ -47,8 +47,9 @@ class ChildrensViewController: UIViewController, UITableViewDelegate, UITableVie
                 let lng = myJson["lng"] as? Double
                 let name = myJson["name"] as? String
                 let male = myJson["male"] as? Bool
+                let city = myJson["city"] as? String
                 
-                let newChildren = Children(name: name, lat: lat, lng: lng, male: male)
+                let newChildren = Children(name: name, lat: lat, lng: lng, male: male, city: city)
                 self.list.append(newChildren)
             }
             
@@ -69,14 +70,15 @@ class ChildrensViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
         if list[indexPath.row].male == true {
             cell.imageView?.image = UIImage(named: "avatar-boy")
         } else {
             cell.imageView?.image = UIImage(named: "avatar-girl")
         }
         cell.textLabel?.text = list[indexPath.row].name
-        cell.detailTextLabel?.text = "Hello"
+        cell.detailTextLabel?.text = list[indexPath.row].city
+        cell.detailTextLabel?.textColor = UIColor(red: 153/255, green: 163/255, blue: 166/255, alpha: 1)
         cell.backgroundColor = UIColor.clear
         cell.layer.masksToBounds = true
         cell.selectionStyle = .none

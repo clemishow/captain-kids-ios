@@ -14,12 +14,14 @@ class Children {
     var lat: Double?
     var lng: Double?
     var male: Bool?
+    var city: String?
     
-    init(name: String?, lat: Double?, lng: Double?, male: Bool?) {
+    init(name: String?, lat: Double?, lng: Double?, male: Bool?, city: String?) {
         self.name = name
         self.lat = lat
         self.lng = lng
         self.male = male
+        self.city = city
     }
     
 }

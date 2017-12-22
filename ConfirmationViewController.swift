@@ -25,7 +25,6 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
         
         self.tableView.allowsSelection = false
         self.title = "Récapitulatif"
-        
         self.initMap()
     }
     
@@ -54,33 +53,25 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
         mapView.showAnnotations(annotations, animated: true)
     }
 
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(selectedChildrens!.count)
         return selectedChildrens!.count
     }
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-//        cell.textLabel?.text = selectedChildrens![indexPath.row].name
-//        cell.backgroundColor = UIColor.clear
-//
-//        return(cell)
-//    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
         if selectedChildrens[indexPath.row].male == true {
             cell.imageView?.image = UIImage(named: "avatar-boy")
         } else {
             cell.imageView?.image = UIImage(named: "avatar-girl")
         }
         cell.textLabel?.text = selectedChildrens[indexPath.row].name
-        cell.detailTextLabel?.text = "Hello"
+        cell.detailTextLabel?.text = selectedChildrens[indexPath.row].city
         cell.backgroundColor = UIColor.clear
         cell.layer.masksToBounds = true
         cell.selectionStyle = .none
         cell.layer.borderColor = UIColor( red: 246/255, green: 246/255, blue: 245/255, alpha: 1).cgColor
+        cell.detailTextLabel?.textColor = UIColor(red: 153/255, green: 163/255, blue: 166/255, alpha: 1)
         cell.layer.borderWidth = 2.0
         return(cell)
     }
