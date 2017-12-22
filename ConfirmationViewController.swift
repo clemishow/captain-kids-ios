@@ -123,7 +123,8 @@ class ConfirmationViewController: UIViewController, UITableViewDelegate, UITable
             print(pickingData)
             self.ref.child("picking").child(user.uid).childByAutoId().setValue(pickingData) { err, ref in
                 print("done")
-                self.performSegue(withIdentifier: "goBackToHome", sender: self)
+                let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                self.navigationController?.pushViewController(secondViewController, animated: true)
             }
         }
     }

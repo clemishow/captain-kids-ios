@@ -328,7 +328,7 @@
         <!--Faire un choix-->
         <scene sceneID="Iv8-Lp-n1q">
             <objects>
-                <viewController storyboardIdentifier="homePage" id="yJC-s5-eiY" customClass="HomeViewController" customModule="captain_kids" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="yJC-s5-eiY" customClass="HomeViewController" customModule="captain_kids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DgP-tt-Zk8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -353,7 +353,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gBy-GP-Mw1">
-                                <rect key="frame" x="0.0" y="246" width="375" height="270"/>
+                                <rect key="frame" x="0.0" y="226" width="375" height="270"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Z-B7-1JW">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
@@ -404,7 +404,7 @@
                                 </subviews>
                             </stackView>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFN-Mv-LNe">
-                                <rect key="frame" x="0.0" y="516" width="375" height="151"/>
+                                <rect key="frame" x="0.0" y="496" width="375" height="171"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="eQK-uM-min">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
@@ -435,7 +435,7 @@
                             <constraint firstItem="4LU-BH-BYp" firstAttribute="top" secondItem="JyD-bG-FJ0" secondAttribute="top" constant="20" id="iCQ-3l-qR5"/>
                             <constraint firstItem="jfM-lF-XsC" firstAttribute="top" secondItem="JyD-bG-FJ0" secondAttribute="top" id="j10-hR-yel"/>
                             <constraint firstItem="dFN-Mv-LNe" firstAttribute="top" secondItem="gBy-GP-Mw1" secondAttribute="bottom" id="lXG-OD-dFR"/>
-                            <constraint firstItem="gBy-GP-Mw1" firstAttribute="top" secondItem="jfM-lF-XsC" secondAttribute="bottom" constant="40" id="rXQ-kw-e28"/>
+                            <constraint firstItem="gBy-GP-Mw1" firstAttribute="top" secondItem="jfM-lF-XsC" secondAttribute="bottom" constant="20" id="rXQ-kw-e28"/>
                             <constraint firstItem="jfM-lF-XsC" firstAttribute="top" secondItem="JyD-bG-FJ0" secondAttribute="top" id="sxu-kC-oWM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JyD-bG-FJ0"/>
@@ -616,7 +616,6 @@
                                 <connections>
                                     <action selector="handleValidate:" destination="xOx-W0-MUF" eventType="touchUpInside" id="6dJ-YP-FbM"/>
                                     <action selector="handleValidate:" destination="kC1-JI-vrF" eventType="touchUpInside" id="qwi-xQ-S91"/>
-                                    <segue destination="a9v-m3-rIT" kind="show" identifier="goBackToHome" id="QoY-gc-Vx6"/>
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-ye-8Zc">
@@ -680,7 +679,4 @@
         <image name="landscape" width="375" height="249"/>
         <image name="profile" width="455" height="455"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Yff-YD-U88"/>
-    </inferredMetricsTieBreakers>
 </document>
