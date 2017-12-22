@@ -353,7 +353,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gBy-GP-Mw1">
-                                <rect key="frame" x="0.0" y="266" width="375" height="180"/>
+                                <rect key="frame" x="0.0" y="246" width="375" height="270"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3Z-B7-1JW">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
@@ -385,14 +385,39 @@
                                             <action selector="beAccompagny:" destination="yJC-s5-eiY" eventType="touchUpInside" id="clF-xy-yXf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prG-vB-JwU">
+                                        <rect key="frame" x="0.0" y="180" width="375" height="90"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="CCD-3y-TpW"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <size key="titleShadowOffset" width="0.0" height="80"/>
+                                        <state key="normal" title="Voir mon profil" image="icon-profile">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="beAccompagny:" destination="yJC-s5-eiY" eventType="touchUpInside" id="8hB-xl-jvK"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="eQK-uM-min">
-                                <rect key="frame" x="0.0" y="418" width="375" height="249"/>
-                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFN-Mv-LNe">
+                                <rect key="frame" x="0.0" y="516" width="375" height="151"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="eQK-uM-min">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="123"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dFN-Mv-LNe" secondAttribute="bottom" id="6LU-E3-6I8"/>
+                            <constraint firstItem="dFN-Mv-LNe" firstAttribute="leading" secondItem="JyD-bG-FJ0" secondAttribute="leading" id="6rc-gX-dAh"/>
                             <constraint firstItem="PpD-5h-U75" firstAttribute="top" secondItem="4LU-BH-BYp" secondAttribute="bottom" constant="15" id="AUr-A8-DOK"/>
                             <constraint firstItem="4LU-BH-BYp" firstAttribute="centerX" secondItem="DgP-tt-Zk8" secondAttribute="centerX" id="B6N-UZ-14X"/>
                             <constraint firstItem="jfM-lF-XsC" firstAttribute="leading" secondItem="JyD-bG-FJ0" secondAttribute="leading" id="DXe-yg-gXy"/>
@@ -404,15 +429,14 @@
                             <constraint firstItem="jfM-lF-XsC" firstAttribute="trailing" secondItem="JyD-bG-FJ0" secondAttribute="trailing" id="M8g-IO-HOo"/>
                             <constraint firstItem="jfM-lF-XsC" firstAttribute="leading" secondItem="JyD-bG-FJ0" secondAttribute="leading" id="NNF-nP-v04"/>
                             <constraint firstItem="jfM-lF-XsC" firstAttribute="trailing" secondItem="JyD-bG-FJ0" secondAttribute="trailing" id="Prj-wN-7Bl"/>
-                            <constraint firstItem="eQK-uM-min" firstAttribute="leading" secondItem="JyD-bG-FJ0" secondAttribute="leading" id="TaO-PR-Ldv"/>
                             <constraint firstItem="jfM-lF-XsC" firstAttribute="top" secondItem="JyD-bG-FJ0" secondAttribute="top" id="a0R-is-2NZ"/>
                             <constraint firstItem="PpD-5h-U75" firstAttribute="leading" secondItem="JyD-bG-FJ0" secondAttribute="leading" constant="15" id="bky-Ji-j5d"/>
+                            <constraint firstItem="dFN-Mv-LNe" firstAttribute="trailing" secondItem="JyD-bG-FJ0" secondAttribute="trailing" id="cB7-7Y-U6C"/>
                             <constraint firstItem="4LU-BH-BYp" firstAttribute="top" secondItem="JyD-bG-FJ0" secondAttribute="top" constant="20" id="iCQ-3l-qR5"/>
                             <constraint firstItem="jfM-lF-XsC" firstAttribute="top" secondItem="JyD-bG-FJ0" secondAttribute="top" id="j10-hR-yel"/>
-                            <constraint firstItem="gBy-GP-Mw1" firstAttribute="top" secondItem="jfM-lF-XsC" secondAttribute="bottom" constant="60" id="rXQ-kw-e28"/>
+                            <constraint firstItem="dFN-Mv-LNe" firstAttribute="top" secondItem="gBy-GP-Mw1" secondAttribute="bottom" id="lXG-OD-dFR"/>
+                            <constraint firstItem="gBy-GP-Mw1" firstAttribute="top" secondItem="jfM-lF-XsC" secondAttribute="bottom" constant="40" id="rXQ-kw-e28"/>
                             <constraint firstItem="jfM-lF-XsC" firstAttribute="top" secondItem="JyD-bG-FJ0" secondAttribute="top" id="sxu-kC-oWM"/>
-                            <constraint firstItem="eQK-uM-min" firstAttribute="bottom" secondItem="JyD-bG-FJ0" secondAttribute="bottom" id="tgQ-0F-3dC"/>
-                            <constraint firstItem="eQK-uM-min" firstAttribute="trailing" secondItem="JyD-bG-FJ0" secondAttribute="trailing" id="vzK-nF-gKu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JyD-bG-FJ0"/>
                     </view>
@@ -424,6 +448,7 @@
                         <outlet property="beAccompagnyButton" destination="9dd-AJ-ysn" id="xGJ-f4-qHb"/>
                         <outlet property="displayNameLabel" destination="PpD-5h-U75" id="byB-Ll-3sK"/>
                         <outlet property="profileImageView" destination="4LU-BH-BYp" id="i7j-nQ-Phd"/>
+                        <outlet property="seeProfileButton" destination="prG-vB-JwU" id="J4d-dP-weL"/>
                         <outlet property="toAccompagnyButton" destination="f3Z-B7-1JW" id="unb-fo-GvB"/>
                     </connections>
                 </viewController>
@@ -651,6 +676,7 @@
         <image name="icon-bell" width="21" height="24"/>
         <image name="icon-car" width="60" height="60"/>
         <image name="icon-message" width="26" height="22"/>
+        <image name="icon-profile" width="60" height="60"/>
         <image name="landscape" width="375" height="249"/>
         <image name="profile" width="455" height="455"/>
     </resources>
